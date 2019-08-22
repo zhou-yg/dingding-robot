@@ -1,7 +1,7 @@
 module.exports = {
   schedule: {
     type: 'worker',
-    cron: '0 52 11 * * *',
+    cron: '0 52 3 * * *',
   },
   async task (ctx) {
 
