@@ -11,19 +11,7 @@ class Robot extends Controller {
     // const c = JSON.stringify(this.ctx.query) + '  ,  ' + JSON.stringify(this.ctx.request.body);
     const c = this.ctx.request.body.text.content + '!!';
 
-    request({
-      url: apiUrl2,
-      method: 'POST',
-      json: true,
-      body: {
-        msgtype: 'text',
-        text: {
-          content: c,
-        }
-      },
-    }, (err, res, body) => {
-      console.log('body:', body);
-    });
+    this.ctx.sendDD(c);
 
 
     this.ctx.body = c;
@@ -32,19 +20,7 @@ class Robot extends Controller {
   async send() {
     const { txt } = this.ctx.query;
 
-    request({
-      url: apiUrl2,
-      method: 'POST',
-      json: true,
-      body: {
-        msgtype: 'text',
-        text: {
-          content: txt,
-        }
-      },
-    }, (err, res, body) => {
-      console.log('body:', body);
-    });
+    this.ctx.sendDD(txt);
 
     this.ctx.body = txt;
   }
