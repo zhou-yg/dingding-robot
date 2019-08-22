@@ -2,10 +2,10 @@
 module.exports = {
   schedule: {
     type: 'worker',
-    cron: '0 */5 * * * *',
+    cron: '0 5 9 * * *',
   },
   async task (ctx) {
 
-    ctx.sendDD ('每5分钟的提醒，记得喝水');
+    ctx.sendDD ('晨会开始喽，大家同步下晨会内容并@我');
   },
 }
