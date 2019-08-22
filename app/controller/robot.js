@@ -8,7 +8,7 @@ class Robot extends Controller {
     console.log(this.ctx.query);
     console.log(this.ctx.request.body);
 
-    const c = JSON.stringify(this.ctx.query) + '  ,  ' + JSON.stringify(this.ctx.request.body);
+    // const c = JSON.stringify(this.ctx.query) + '  ,  ' + JSON.stringify(this.ctx.request.body);
     const c = this.ctx.request.body.text.content + ' !';
 
     request({
